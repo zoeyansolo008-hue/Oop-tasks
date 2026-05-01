@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+public:
+    int length;
+    int width;
+};
+
+// Functions outside class
+void setDimensions(Rectangle &r) {
+    cout << "Enter length: ";
+    cin >> r.length;
+
+    cout << "Enter width: ";
+    cin >> r.width;
+}
+
+int area(Rectangle r) {
+    return r.length * r.width;
+}
+
+int perimeter(Rectangle r) {
+    return 2 * (r.length + r.width);
+}
+
+int main() {
+    Rectangle r;
+
+    setDimensions(r);
+
+    cout << "Area: " << area(r) << endl;
+    cout << "Perimeter: " << perimeter(r) << endl;
+
+    return 0;
+}
