@@ -1,0 +1,33 @@
+
+#include <iostream>
+using namespace std;
+
+struct Student {
+    string name;
+    int rollNumber;
+    float marks;
+};
+
+void displayStudentInfo(Student s) {
+    cout << "\nStudent Info:\n";
+    cout << "Name:Zoyan Attiq " << s.name << endl;
+    cout << "Roll Number:29 " << s.rollNumber << endl;
+    cout << "Marks:50 " << s.marks << endl;
+}
+
+int main() {
+    Student s;
+
+    cout << "Enter name:Zoyan Attiq ";
+    cin >> s.name;
+
+    cout << "Enter roll number:29 ";
+    cin >> s.rollNumber;
+
+    cout << "Enter marks:50 ";
+    cin >> s.marks;
+
+    displayStudentInfo(s);
+
+    return 0;
+}
