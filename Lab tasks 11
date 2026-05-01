@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+class Person {
+protected:
+    string name;
+    int age;
+
+public:
+    void input_person() {
+        cout << "Enter name: ";
+        cin >> name;
+        cout << "Enter age: ";
+        cin >> age;
+    }
+
+    void display_person_info() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+    }
+};
+
+class Student : public Person {
+private:
+    int student_id;
+
+public:
+    void input_student() {
+        input_person();
+        cout << "Enter student ID: ";
+        cin >> student_id;
+    }
+
+    void display_student_info() {
+        display_person_info();
+        cout << "Student ID: " << student_id << endl;
+    }
+};
+
+int main() {
+    Student s;
+    s.input_student();
+    s.display_student_info();
+    return 0;
+}
